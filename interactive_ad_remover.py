@@ -433,6 +433,14 @@ class InteractiveAdRemoverGUI:
         self.root.title("PDF广告移除工具 - 保留区域模式")
         self.root.geometry("1400x800")
         
+        # 设置窗口图标
+        try:
+            icon_path = os.path.join(os.path.dirname(__file__), "ico.ico")
+            if os.path.exists(icon_path):
+                self.root.iconbitmap(icon_path)
+        except Exception as e:
+            print(f"无法加载图标: {e}")
+        
         # 数据存储
         self.pdf_file_path = None
         self.output_pdf_path = None

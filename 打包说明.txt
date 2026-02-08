@@ -1,0 +1,83 @@
+PDF广告移除工具 - 打包说明
+================================
+
+打包前准备
+----------
+1. 确保已安装Python 3.7+
+2. 确保已安装所需依赖:
+   pip install opencv-python pillow pymupdf numpy
+
+3. 确保已安装PyInstaller:
+   pip install pyinstaller
+
+4. 确保当前目录下有以下文件:
+   - interactive_ad_remover.py (主程序)
+   - ico.ico (图标文件)
+   - version_info.txt (版本信息)
+   - 打包.py 或 打包.bat (打包脚本)
+
+打包方法
+--------
+
+方法1: 使用Python脚本 (推荐)
+----------------------------
+运行以下命令:
+  python 打包.py
+
+方法2: 使用批处理脚本
+----------------------
+双击运行:
+  打包.bat
+
+方法3: 手动打包
+---------------
+运行以下命令:
+  pyinstaller --onefile --windowed --icon=ico.ico --name="PDF广告移除工具" --version-file=version_info.txt interactive_ad_remover.py
+
+
+打包参数说明
+------------
+--onefile          : 打包成单个exe文件
+--windowed         : 不显示控制台窗口
+--icon=ico.ico     : 设置exe图标
+--name="PDF广告移除工具" : 设置exe文件名
+--version-file=version_info.txt : 设置版本信息
+
+
+打包完成后
+----------
+1. 生成的exe文件位于 dist 文件夹中
+2. 文件名为: PDF广告移除工具.exe
+3. 可以直接双击运行,无需安装Python环境
+
+
+注意事项
+--------
+1. 首次运行exe文件时可能会比较慢,这是正常现象
+2. 杀毒软件可能会误报,请添加信任
+3. 确保ico.ico文件存在,否则打包会失败
+4. 打包后的文件较大(约100-200MB),这是正常的
+
+
+常见问题
+--------
+
+Q: 打包失败,提示找不到pyinstaller
+A: 请先安装pyinstaller: pip install pyinstaller
+
+Q: 打包失败,提示找不到ico.ico
+A: 请确保ico.ico文件在当前目录下
+
+Q: exe文件运行时闪退
+A: 可能是缺少依赖,请确保所有依赖都已安装
+
+Q: exe文件太大
+A: 这是正常的,因为包含了所有依赖库
+
+Q: 杀毒软件报毒
+A: 这是误报,请添加信任或临时关闭杀毒软件
+
+
+技术支持
+--------
+如有问题,请检查控制台输出的错误信息
