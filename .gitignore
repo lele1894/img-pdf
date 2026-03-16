@@ -1,0 +1,52 @@
+# Python 虚拟环境
+venv*/
+env/
+ENV/
+.venv
+
+# PyInstaller 构建文件
+build/
+dist/
+*.spec
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# 日志文件
+*.log
+
+# IDE 配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# CodeArts 配置
+.arts/
+.codeartsdoer/
+
+# 临时文件
+*.tmp
+*.bak
+*.cache
+
+# 打包输出
+*.exe
+cleaned/
+
+# 环境变量
+.env
+.env.local
